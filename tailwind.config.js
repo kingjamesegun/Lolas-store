@@ -10,7 +10,8 @@ module.exports = {
       },
       colors: {
         'input-border': '#2B3444',
-        'pink': '#D05663'
+        'pink': '#D05663',
+        'input-grey': '#938D8D'
       }
     },    
   },

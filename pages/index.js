@@ -10,8 +10,9 @@ export default function Home() {
         <link rel="icon" href="images/LogoFavicon.png" />
       </Head>
 
-    <main className=''>
+    <main className='flex flex-col'>
       <Link href='./login'><a>Login Page</a></Link>
+      <Link href='./sign-up'><a>Sign up Page</a></Link>
     </main>
     </div>
   )

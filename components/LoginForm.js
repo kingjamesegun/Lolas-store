@@ -1,14 +1,14 @@
 import Link from "next/link"
-const Form = () => {
+const LoginForm = () => {
   return (
     <form>
         <div className="flex flex-col mb-4">
             <label htmlFor="email" className="text-sm mb-2 font-semibold">Email</label>
-            <input type="email" id="email" className="rounded-md border py-3 px-5 text-sm border-input-border placeholder:text-input-border outline-0" placeholder="youremail@gmail.com" />
+            <input type="email" id="email" className="rounded-md border py-3 px-5 text-sm border-input-border placeholder:text-input-grey outline-0" placeholder="youremail@gmail.com" />
         </div>
         <div className="flex flex-col mb-4">
             <label htmlFor="password" className="text-sm mb-2 font-semibold">Password</label>
-            <input type="password" id="password" placeholder="Password" className="rounded-md border py-4 px-6 text-sm border-input-border placeholder:text-input-border outline-0" />
+            <input type="password" id="password" placeholder="Password" className="rounded-md border py-4 px-6 text-sm border-input-border placeholder:text-input-grey outline-0" />
         </div>
         <div className="flex justify-between items-center mb-6">
             <div className="flex flex-row items-center justify-center">
@@ -21,11 +21,11 @@ const Form = () => {
             </div>
         </div>
         <div className="flex flex-col justify-center items-center">
-            <Link href='login/israel'><button className=" mb-4 w-full bg-input-border text-white px-2 py-4 rounded-md">Login</button></Link>
+            <Link href=''><button className=" mb-4 w-full bg-input-border text-white px-2 py-4 rounded-md">Login</button></Link>
             <Link href=''><a className='text-blue-600 text-sm'>Forgot password?</a></Link>
         </div>
     </form>
   )
 }
 
-export default Form
+export default LoginForm
