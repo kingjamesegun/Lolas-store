@@ -18,7 +18,7 @@ export const SidePageLogin = () => {
 				</p>
 			</div>
 			<figure>
-				<div className='absolute left-10 bottom-20 md:bottom-30 md:left-14 md:-right-20 -right-20 lg:left-20 lg:-right-20 lg:top-1/3'>
+				<div className='absolute left-10 bottom-15 md:bottom-30 md:left-14 md:-right-20 -right-20 lg:left-20 lg:-right-20 lg:top-1/3'>
 					<Image
 						src={Dashboard}
 						alt='Dashboard Image'
