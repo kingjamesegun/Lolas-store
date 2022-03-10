@@ -9,7 +9,6 @@ const login = () => {
         <title>Login Page</title>
         <meta name="description" content="Login page to be able to access your personal dashboard" />
         <link rel="shortcut icon" href="images/LogoFavicon.png" type="image/x-icon" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <section className="font-Roboto flex flex-row flex-1 h-screen">
         <div className="w-6/12 p-16">

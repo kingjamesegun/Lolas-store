@@ -55,7 +55,7 @@ const SignUpForm = () => {
 				</div>
 				<div className='flex items-center '>
 					<p className='text-xs font-medium'>Already have an account?</p>
-					<Link href='    '>
+					<Link href='/login'>
 						<a className='text-xs font-medium text-blue-600 ml-1'>Login</a>
 					</Link>
 				</div>
@@ -68,7 +68,6 @@ const SignUpForm = () => {
 						</button>
 					</a>
 				</Link>
-				{/* <Link href=''><a className='text-blue-600 text-sm'>Forgot password?</a></Link> */}
 			</div>
 		</form>
 	);

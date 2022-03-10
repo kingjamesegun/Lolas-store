@@ -31,7 +31,7 @@ const LoginForm = () => {
 				</div>
 				<div className='flex items-center '>
 					<p className='text-xs font-medium'>No account yet?</p>
-					<Link href=''>
+					<Link href='/sign-up'>
 						<a className='text-xs font-medium text-blue-600 ml-1'>Register</a>
 					</Link>
 				</div>
