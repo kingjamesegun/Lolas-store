@@ -13,7 +13,7 @@ const signUp = () => {
       <section className="font-Roboto flex flex-col md:flex-row md:flex-1 h-full md:h-full">
         <div className="pb-6 p-4 w-full md:w-6/12 lg:p-16 md:p-8">
           <div className="mb-8">
-            <h1 className="font-semibold text-input-border lg:text-4xl text-2xl sm:text-3xl mb-1 tracking-normal">Create Account</h1>
+            <h1 className="font-semibold text-input-border lg:text-4xl mb-1 tracking-normal">Create Account</h1>
             <p className="text-xs font-semibold">Sign up to start setting up your store.</p>
           </div>
           <SignUpForm />
