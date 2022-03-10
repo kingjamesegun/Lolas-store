@@ -9,7 +9,7 @@ const LoginForm = () => {
 				<input
 					type='email'
 					id='email'
-					className='rounded-md border py-3 px-5 text-sm border-input-border placeholder:text-input-grey outline-0'
+					className='rounded-md border py-3 md:px-5 px-3 text-sm border-input-border placeholder:text-input-grey outline-0'
 					placeholder='youremail@gmail.com'
 				/>
 			</div>
@@ -21,7 +21,7 @@ const LoginForm = () => {
 					type='password'
 					id='password'
 					placeholder='Password'
-					className='rounded-md border py-4 px-6 text-sm border-input-border placeholder:text-input-grey outline-0'
+					className='rounded-md border py-4 md:px-6 px-3 text-sm border-input-border placeholder:text-input-grey outline-0'
 				/>
 			</div>
 			<div className='flex justify-between items-center mb-6'>

@@ -3,13 +3,13 @@ const SignUpForm = () => {
 	return (
 		<form>
 			<div className='flex flex-col mb-4'>
-				<label htmlFor='email' className='text-sm mb-2 font-semibold'>
+				<label htmlFor='text' className='text-sm mb-2 font-semibold'>
 					Name
 				</label>
 				<input
-					type='email'
-					id='email'
-					className='rounded-md border py-3 px-5 text-sm border-input-border placeholder:text-input-grey outline-0'
+					type='text'
+					id='text'
+					className='rounded-md border py-3 md:px-5 px-3 text-sm border-input-border placeholder:text-input-grey outline-0'
 					placeholder='John Doe'
 				/>
 			</div>
@@ -20,11 +20,11 @@ const SignUpForm = () => {
 				<input
 					type='email'
 					id='email'
-					className='rounded-md border py-3 px-5 text-sm border-input-border placeholder:text-input-grey outline-0'
+					className='rounded-md border py-3 md:px-5 px-3 text-sm border-input-border placeholder:text-input-grey outline-0'
 					placeholder='youremail@gmail.com'
 				/>
 			</div>
-			<div className='flex justify-between'>
+			<div className='flex flex-col lg:justify-between'>
 				<div className='flex flex-col mb-4 mx-1 w-full'>
 					<label htmlFor='password' className='text-sm mb-2 font-semibold'>
 						Password
@@ -33,18 +33,18 @@ const SignUpForm = () => {
 						type='password'
 						id='password'
 						placeholder='Password'
-						className='rounded-md border py-4 px-4 text-sm border-input-border placeholder:text-input-grey outline-0'
+						className='rounded-md border py-4 md:px-4 px-3 text-sm border-input-border placeholder:text-input-grey outline-0'
 					/>
 				</div>
 				<div className='flex flex-col mb-4 mx-1 w-full'>
-					<label htmlFor='password' className='text-sm mb-2 font-semibold'>
+					<label htmlFor='cpassword' className='text-sm mb-2 font-semibold'>
 						Confirm Password
 					</label>
 					<input
 						type='password'
-						id='password'
+						id='cpassword'
 						placeholder='Confirm Password'
-						className='rounded-md border py-4 px-4 text-sm border-input-border placeholder:text-input-grey outline-0'
+						className='rounded-md border py-4 md:px-4 px-3 text-sm border-input-border placeholder:text-input-grey outline-0'
 					/>
 				</div>
 			</div>
@@ -53,7 +53,7 @@ const SignUpForm = () => {
 					<input className='mr-1' type='checkbox' />
 					<span className='text-xs font-semibold'>Remember Me</span>
 				</div>
-				<div className='flex items-center '>
+				<div className='flex items-center justify-center '>
 					<p className='text-xs font-medium'>Already have an account?</p>
 					<Link href='/login'>
 						<a className='text-xs font-medium text-blue-600 ml-1'>Login</a>
