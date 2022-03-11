@@ -36,7 +36,8 @@ const SignUpForm = () => {
 					placeholder='youremail@gmail.com'
 				/>
 			</div>
-			<div className='flex flex-col lg:justify-between'>
+			{/* <div className='flex flex-col lg:justify-between'> */}
+			<div className='grid grid-cols-1 lg:grid-cols-2 gap-3'>
 				<div className='flex flex-col mb-4 mx-1 w-full'>
 					<label htmlFor='password' className='text-sm mb-2 font-semibold'>
 						Password
@@ -49,9 +50,9 @@ const SignUpForm = () => {
 						/>
 						{
 							showPassword ? 
-							<FaEyeSlash className='absolute right-4 bottom-4 cursor-pointer' onClick={togglePassword} />
+							<FaEyeSlash className='absolute right-3 bottom-4 cursor-pointer' onClick={togglePassword} />
 							:
-							<FaEye className='absolute right-4 bottom-4 cursor-pointer' onClick={togglePassword} />
+							<FaEye className='absolute right-3 bottom-4 cursor-pointer' onClick={togglePassword} />
 						}
 					</div>
 				</div>
@@ -67,9 +68,9 @@ const SignUpForm = () => {
 						/>
 						{
 							showCPassword ? 
-							<FaEyeSlash className='absolute right-4 bottom-4 cursor-pointer' onClick={toggleCPassword} />
+							<FaEyeSlash className='absolute right-3 bottom-4 cursor-pointer' onClick={toggleCPassword} />
 							:
-							<FaEye className='absolute right-4 bottom-4 cursor-pointer' onClick={toggleCPassword} />
+							<FaEye className='absolute right-3 bottom-4 cursor-pointer' onClick={toggleCPassword} />
 						}
 					</div>
 				</div>
