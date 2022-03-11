@@ -1,15 +1,28 @@
+import React, {useState} from 'react'
 import Link from 'next/link';
+import InputForm from './InputForm';
+import {FaEye} from "react-icons/fa"
+import {FaEyeSlash} from "react-icons/fa"
+
 const SignUpForm = () => {
+	// Logic
+	const [showPassword, setShowPassword] = useState(false)
+	const [showCPassword, setShowCPassword] = useState(false)
+	const togglePassword = () =>{
+		setShowPassword(!showPassword)
+	}
+	const toggleCPassword = () =>{
+		setShowCPassword(!showCPassword)
+	}
 	return (
 		<form>
 			<div className='flex flex-col mb-4'>
 				<label htmlFor='text' className='text-sm mb-2 font-semibold'>
 					Name
 				</label>
-				<input
+				<InputForm
 					type='text'
 					id='text'
-					className='rounded-md border py-3 md:px-5 px-3 text-sm border-input-border placeholder:text-input-grey outline-0'
 					placeholder='John Doe'
 				/>
 			</div>
@@ -17,10 +30,9 @@ const SignUpForm = () => {
 				<label htmlFor='email' className='text-sm mb-2 font-semibold'>
 					Email
 				</label>
-				<input
+				<InputForm
 					type='email'
 					id='email'
-					className='rounded-md border py-3 md:px-5 px-3 text-sm border-input-border placeholder:text-input-grey outline-0'
 					placeholder='youremail@gmail.com'
 				/>
 			</div>
@@ -29,23 +41,37 @@ const SignUpForm = () => {
 					<label htmlFor='password' className='text-sm mb-2 font-semibold'>
 						Password
 					</label>
-					<input
-						type='password'
-						id='password'
-						placeholder='Password'
-						className='rounded-md border py-4 md:px-4 px-3 text-sm border-input-border placeholder:text-input-grey outline-0'
-					/>
+					<div className='relative'>
+						<InputForm
+							type={showPassword ? 'text':'password'}
+							id='password'
+							placeholder='Password'
+						/>
+						{
+							showPassword ? 
+							<FaEyeSlash className='absolute right-4 bottom-4 cursor-pointer' onClick={togglePassword} />
+							:
+							<FaEye className='absolute right-4 bottom-4 cursor-pointer' onClick={togglePassword} />
+						}
+					</div>
 				</div>
 				<div className='flex flex-col mb-4 mx-1 w-full'>
 					<label htmlFor='cpassword' className='text-sm mb-2 font-semibold'>
 						Confirm Password
 					</label>
-					<input
-						type='password'
-						id='cpassword'
-						placeholder='Confirm Password'
-						className='rounded-md border py-4 md:px-4 px-3 text-sm border-input-border placeholder:text-input-grey outline-0'
-					/>
+					<div className='relative'>
+						<InputForm
+							type={showCPassword ? 'text':'password'}
+							id='cpassword'
+							placeholder='Confirm Password'
+						/>
+						{
+							showCPassword ? 
+							<FaEyeSlash className='absolute right-4 bottom-4 cursor-pointer' onClick={toggleCPassword} />
+							:
+							<FaEye className='absolute right-4 bottom-4 cursor-pointer' onClick={toggleCPassword} />
+						}
+					</div>
 				</div>
 			</div>
 			<div className='flex justify-between items-center mb-6'>
