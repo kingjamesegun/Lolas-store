@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Link from 'next/link';
-import InputForm from './InputForm';
+import InputForm from '../InputForm';
 import {FaEye} from "react-icons/fa"
 import {FaEyeSlash} from "react-icons/fa"
 

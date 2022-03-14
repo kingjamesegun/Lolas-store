@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
-import InputForm from './InputForm';
+import InputForm from '../InputForm';
 import {FaEye} from "react-icons/fa"
 import {FaEyeSlash} from "react-icons/fa"
 const LoginForm = () => {
@@ -47,7 +47,7 @@ const LoginForm = () => {
 				</div>
 				<div className='flex items-center '>
 					<p className='text-xs font-medium'>No account yet?</p>
-					<Link href='/sign-up'>
+					<Link href='/signup'>
 						<a className='text-xs font-medium text-blue-600 ml-1'>Register</a>
 					</Link>
 				</div>

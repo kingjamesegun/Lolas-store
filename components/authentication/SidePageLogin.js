@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import Dashboard from '../public/images/Dashboard.png';
+import Dashboard from '../../public/images/Dashboard.png';
 
-export const SidePageLogin = () => {
+const SidePageLogin = () => {
 	return (
 		<div className='py-4 md:w-6/12 w-full h-screen lg:py-16 md:py-8 md:h-auto bg-input-border flex flex-col items-center text-white relative overflow-hidden'>
 			<div className='lg:w-9/12 w-full px-2 mx-auto mb-12 flex flex-col items-center'>
@@ -32,3 +32,5 @@ export const SidePageLogin = () => {
 		</div>
 	);
 };
+
+export default SidePageLogin
