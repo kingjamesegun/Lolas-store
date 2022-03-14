@@ -23,6 +23,9 @@ export default function Home() {
 				<Link href='./toast'>
 					<a>Toast </a>
 				</Link>
+        <Link href='./dashboard'>
+					<a>Dashboard </a>
+				</Link>
 			</main>
 		</div>
 	);
