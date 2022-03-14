@@ -11,7 +11,11 @@ module.exports = {
       colors: {
         'input-border': '#2B3444',
         'pink': '#D05663',
-        'input-grey': '#938D8D'
+        'input-grey': '#938D8D',
+        'success' : '#55B727',
+        'error': '#D05663',
+        'warning': '#F1CF1A',
+        'information': '#2B3444'
       }
     },    
   },
