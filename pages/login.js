@@ -1,6 +1,6 @@
 import Head from "next/head"
-import LoginForm from "../../components/LoginForm"
-import { SidePage } from "../../components/SidePage"
+import LoginForm from "../components/authentication/LoginForm"
+import {SidePage}  from "../components/authentication/SidePage"
 
 const login = () => {
   return (

@@ -17,8 +17,11 @@ export default function Home() {
 				<Link href='./login'>
 					<a>Login Page</a>
 				</Link>
-				<Link href='./sign-up'>
+				<Link href='./signup'>
 					<a>Sign up Page</a>
+				</Link>
+				<Link href='./toast'>
+					<a>Toast </a>
 				</Link>
 			</main>
 		</div>

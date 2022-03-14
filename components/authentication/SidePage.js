@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Dashboard from '../public/images/Dashboard.png';
+import Dashboard from '../../public/images/Dashboard.png';
 
 export const SidePage = () => {
 	return (
