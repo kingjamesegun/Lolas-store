@@ -16,7 +16,7 @@ module.exports = {
         'error': '#D05663',
         'warning': '#F1CF1A',
         'information': '#2B3444'
-      }
+      },
     },    
   },
   plugins: [],
