@@ -1,5 +1,7 @@
 import Head from "next/head";
+import Link from 'next/link'
 import Image from "next/image";
+import Logo from "../public/images/WebLogo.png";
 import Splash from "../public/images/Splash.png";
 import Ellipse from "../public/images/Ellipse.png";
 import LoginForm from "../components/authentication/LoginForm";
@@ -21,16 +23,25 @@ const login = () => {
 				/>
 			</Head>
 			<section className='font-Roboto flex flex-col md:flex-row md:flex-1 h-full md:h-screen'>
-				<div className='pb-6 p-4 w-full md:w-6/12 lg:p-16 md:p-8'>
-					<div className='md:hidden fixed bottom-0 -left-16 -z-10'>
+				<div className='pb-6 p-4 pt-2 w-full md:w-6/12 lg:p-16 md:p-8 md:pt-4'>
+					<div className='md:hidden fixed -bottom-6 -left-16 -z-10'>
 						<Image
 							src={Ellipse}
 							alt='Ellipse'
-							width={120}
-							height={120}
+							width={100}
+							height={100}
 							objectFit='contain'
 						/>
 					</div>
+					<Link href='/'>
+						<Image
+							src={Logo}
+							alt='Logo'
+							width={50}
+							height={50}
+							objectFit='contain'
+						/>
+					</Link>
 					<div className='mb-8 relative'>
 						<div className='md:hidden absolute right-0'>
 							<Image
