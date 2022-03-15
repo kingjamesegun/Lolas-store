@@ -15,7 +15,7 @@ const SignUpForm = () => {
         setShowCPassword(!showCPassword)
     }
     return (
-        <form>
+        <form className='z-10'>
             <div className='flex flex-col mb-4'>
                 <label htmlFor='text' className='text-sm mb-2 font-semibold'>
                     Name
