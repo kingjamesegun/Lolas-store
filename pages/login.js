@@ -22,7 +22,7 @@ const login = () => {
 			</Head>
 			<section className='font-Roboto flex flex-col md:flex-row md:flex-1 h-full md:h-screen'>
 				<div className='pb-6 p-4 w-full md:w-6/12 lg:p-16 md:p-8'>
-					<div className='md:hidden absolute bottom-0 -left-16'>
+					<div className='md:hidden absolute bottom-0 -left-16 -z-10'>
 						<Image
 							src={Ellipse}
 							alt='Ellipse'
