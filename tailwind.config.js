@@ -4,6 +4,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screen: {
+      xs: '480px',
+      sm: '640px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px'
+    },
     extend: {
       fontFamily: {
         'Roboto': ['Roboto', 'sans-serif']
