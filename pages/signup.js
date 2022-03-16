@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Link from "next/link"
+import Link from "next/link";
 import Splash from "../public/images/Splash.png";
 import Ellipse from "../public/images/Ellipse.png";
 import Logo from "../public/images/WebLogo.png";
@@ -34,13 +34,15 @@ const signUp = () => {
 						/>
 					</div>
 					<Link href='/'>
-						<Image
-							src={Logo}
-							alt='Logo'
-							width={50}
-							height={50}
-							objectFit='contain'
-						/>
+						<a className='cursor-pointer'>
+							<Image
+								src={Logo}
+								alt='Logo'
+								width={50}
+								height={50}
+								objectFit='contain'
+							/>
+						</a>
 					</Link>
 					<div className='mb-8 relative'>
 						<div className='md:hidden absolute right-0'>

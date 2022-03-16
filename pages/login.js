@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Link from 'next/link'
+import Link from "next/link";
 import Image from "next/image";
 import Logo from "../public/images/WebLogo.png";
 import Splash from "../public/images/Splash.png";
@@ -34,13 +34,15 @@ const login = () => {
 						/>
 					</div>
 					<Link href='/'>
-						<Image
-							src={Logo}
-							alt='Logo'
-							width={50}
-							height={50}
-							objectFit='contain'
-						/>
+						<a className='cursor-pointer'>
+							<Image
+								src={Logo}
+								alt='Logo'
+								width={50}
+								height={50}
+								objectFit='contain'
+							/>
+						</a>
 					</Link>
 					<div className='mb-8 relative'>
 						<div className='md:hidden absolute right-0'>
