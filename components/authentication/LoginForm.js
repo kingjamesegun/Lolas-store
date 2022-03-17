@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import InputForm from "../InputForm";
+import PasswordForm from "../PasswordForm";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { Form } from "formik";
@@ -30,23 +31,14 @@ const LoginForm = () => {
 					Password
 				</label>
 				<div className='relative'>
-					<InputForm
+					<PasswordForm
 						name='Password'
 						type={showPassword ? "text" : "password"}
 						id='password'
 						placeholder='Password'
+						showPassword={showPassword}
+						togglePassword={togglePassword}
 					/>
-					{showPassword ? (
-						<FaEyeSlash
-							className='absolute right-4 bottom-4 cursor-pointer'
-							onClick={togglePassword}
-						/>
-					) : (
-						<FaEye
-							className='absolute right-4 bottom-4 cursor-pointer'
-							onClick={togglePassword}
-						/>
-					)}
 				</div>
 			</div>
 			<div className='flex justify-between items-center mb-6'>
@@ -62,7 +54,9 @@ const LoginForm = () => {
 				</div>
 			</div>
 			<div className='flex flex-col justify-center items-center'>
-				<button type="submit" className=' mb-4 w-full bg-input-border text-white px-2 py-4 rounded-md'>
+				<button
+					type='submit'
+					className=' mb-4 w-full bg-input-border text-white px-2 py-4 rounded-md'>
 					Login
 				</button>
 				<Link href=''>

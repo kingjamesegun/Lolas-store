@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import InputForm from "../InputForm";
+import PasswordForm from "../PasswordForm";
+import CpasswordForm from "../CpasswordForm";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { Form } from "formik";
@@ -9,7 +11,6 @@ const SignUpForm = () => {
 	// Logic
 	const [showPassword, setShowPassword] = useState(false);
 	const [showCPassword, setShowCPassword] = useState(false);
-    // const [error, setError] = useState(false);
 	const togglePassword = () => {
 		setShowPassword(!showPassword);
 	};
@@ -41,23 +42,14 @@ const SignUpForm = () => {
 						Password
 					</label>
 					<div className='relative'>
-						<InputForm 
+						<PasswordForm 
 							name='Password'
 							type={showPassword ? "text" : "password"}
 							id='password'
 							placeholder='Password'
+                            showPassword={showPassword}
+                            togglePassword={togglePassword}
 						/>
-						{showPassword ? (
-							<FaEyeSlash
-								className={"absolute right-4 bottom-4 cursor-pointer"}
-								onClick={togglePassword}
-							/>
-						) : (
-							<FaEye
-								className={`absolute right-4 bottom-4 cursor-pointer`}
-								onClick={togglePassword}
-							/>
-						)}
 					</div>
 				</div>
 				<div className='flex flex-col mb-4 mx-1 w-full'>
@@ -65,23 +57,13 @@ const SignUpForm = () => {
 						Confirm Password
 					</label>
 					<div className='relative'>
-						<InputForm 
+						<CpasswordForm 
 							name='Cpassword'
 							type={showCPassword ? "text" : "password"}
 							id='cpassword'
-							placeholder='Confirm Password'
+							placeholder='Confirm Password' showCPassword={showCPassword}
+                            toggleCPassword={toggleCPassword}
 						/>
-						{showCPassword ? (
-							<FaEyeSlash
-								className='absolute right-3 bottom-4 cursor-pointer'
-								onClick={toggleCPassword}
-							/>
-						) : (
-							<FaEye
-								className='absolute right-3 bottom-4 cursor-pointer'
-								onClick={toggleCPassword}
-							/>
-						)}
 					</div>
 				</div>
 			</div>
@@ -104,7 +86,6 @@ const SignUpForm = () => {
 					Create Account
 				</button>
 			</div>
-            {/* {console.log(error)} */}
 		</Form>
 	);
 };
