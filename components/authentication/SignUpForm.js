@@ -5,11 +5,11 @@ import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { Form } from "formik";
 
-const SignUpForm = ({ formik }) => {
+const SignUpForm = () => {
 	// Logic
 	const [showPassword, setShowPassword] = useState(false);
 	const [showCPassword, setShowCPassword] = useState(false);
-    const [error, setError] = useState(false);
+    // const [error, setError] = useState(false);
 	const togglePassword = () => {
 		setShowPassword(!showPassword);
 	};
@@ -18,18 +18,17 @@ const SignUpForm = ({ formik }) => {
 	};
 	return (
 		<Form className='z-10'>
-			{/* {formik.touched.Password ? console.log("Password Errors found") : console.log("No errors")} */}
 			<div className='flex flex-col mb-4'>
 				<label htmlFor='text' className={"text-sm mb-2 font-semibold"}>
 					Name
 				</label>
-				<InputForm error={error} setError={setError} name='Name' type='text' id='text' placeholder='John Doe' />
+				<InputForm  name='Name' type='text' id='text' placeholder='John Doe' />
 			</div>
 			<div className='flex flex-col mb-4'>
 				<label htmlFor='email' className='text-sm mb-2 font-semibold'>
 					Email
 				</label>
-				<InputForm error={error} setError={setError}
+				<InputForm 
 					name='Email'
 					type='email'
 					id='email'
@@ -42,7 +41,7 @@ const SignUpForm = ({ formik }) => {
 						Password
 					</label>
 					<div className='relative'>
-						<InputForm error={error} setError={setError}
+						<InputForm 
 							name='Password'
 							type={showPassword ? "text" : "password"}
 							id='password'
@@ -66,7 +65,7 @@ const SignUpForm = ({ formik }) => {
 						Confirm Password
 					</label>
 					<div className='relative'>
-						<InputForm error={error} setError={setError}
+						<InputForm 
 							name='Cpassword'
 							type={showCPassword ? "text" : "password"}
 							id='cpassword'

@@ -89,7 +89,7 @@ const signUp = () => {
 										Sign up to start setting up your store.
 									</p>
 								</div>
-								<SignUpForm formik={formik} />
+								<SignUpForm />
 							</div>
 						)}
 					</Formik>
