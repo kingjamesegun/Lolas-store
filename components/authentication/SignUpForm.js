@@ -92,7 +92,7 @@ const SignUpForm = () => {
 				</div>
 				<div className='flex items-center justify-center '>
 					<p className='text-xs font-medium'>Already have an account?</p>
-					<Link href='/login'>
+					<Link href='/login' as='/login'>
 						<a className='text-xs font-medium text-blue-600 ml-1'>Login</a>
 					</Link>
 				</div>
