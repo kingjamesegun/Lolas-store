@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import InputForm from "../InputForm";
 import PasswordForm from "../PasswordForm";
-import { FaEye } from "react-icons/fa";
-import { FaEyeSlash } from "react-icons/fa";
 import { Form } from "formik";
 
 const LoginForm = () => {
