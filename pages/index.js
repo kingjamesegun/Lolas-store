@@ -14,10 +14,10 @@ export default function Home() {
 			</Head>
 
 			<main className='flex flex-col items-center pt-4'>
-				<Link href='/login'>
+				<Link href='/login' as='/login'>
 					<a>Login Page</a>
 				</Link>
-				<Link href='/signup'>
+				<Link href='/signup' as='/signup'>
 					<a>Sign up Page</a>
 				</Link>
 				<Link href='/toast'>
