@@ -4,7 +4,7 @@ import Dashboard from '../../public/images/Dashboard.png';
 
 export const SidePage = () => {
 	return (
-		<div className='py-4 md:w-6/12 w-full h-screen lg:py-16 md:py-8 md:h-auto bg-input-border flex flex-col items-center text-white relative overflow-hidden'>
+		<div className='hidden sm:flex py-4 md:w-6/12 w-full h-screen lg:py-16 md:py-8 md:h-auto bg-input-border flex-col items-center text-white relative overflow-hidden'>
 			<div className='lg:w-9/12 w-full px-2 mx-auto mb-12 flex flex-col items-center'>
 				<div className='flex items-center justify-center mb-3'>
 					<h2 className='font-semi-bold z-10 text-lg'>Create your own website store</h2>
