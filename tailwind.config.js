@@ -4,6 +4,13 @@ module.exports = {
 		'./components/**/*.{js,ts,jsx,tsx}',
 	],
 	theme: {
+		screen: {
+			xs: '480px',
+			sm: '640px',
+			md: '768px',
+			lg: '976px',
+			xl: '1440px',
+		},
 		extend: {
 			fontFamily: {
 				Roboto: ['Roboto', 'sans-serif'],
@@ -16,10 +23,6 @@ module.exports = {
 				error: '#D05663',
 				warning: '#F1CF1A',
 				information: '#2B3444',
-				white: '#fdfdfd',
-				primary: '#2B3444',
-				secondary: '#D05663',
-        "hrsecondary" : "#C55863",
 			},
 		},
 	},
