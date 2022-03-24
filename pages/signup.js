@@ -10,18 +10,21 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 
 const signUp = () => {
+	// Validation
+	let yup = require('yup');
 	const validate = Yup.object({
-		Name: Yup.string()
+		username: Yup.string().matches(/^\S*$/, 'There should be no space between username')
 			.max(15, "Must be 15 characters or less")
 			.required("Name is required"),
-		Email: Yup.string().email("Email is invalid").required("Email is required"),
-		Password: Yup.string()
-			.min(6, "Password must be at least 6 characters")
+		email: Yup.string().email("Email is invalid").required("Email is required"),
+		password1: Yup.string()
+			.min(8, "Password must be at least 8 characters")
 			.required("Password is required"),
-		Cpassword: Yup.string()
-			.oneOf([Yup.ref("Password"), null], "Password must match")
+		password2: Yup.string()
+			.oneOf([Yup.ref("password1"), null], "Password must match")
 			.required("Password is required"),
 	});
+
 	return (
 		<div>
 			<Head>
@@ -40,18 +43,31 @@ const signUp = () => {
 				<div className='pb-6 p-4 pt-2 w-full md:w-6/12 lg:p-10 lg:pt-6 md:p-8 md:pt-4'>
 					<Formik
 						initialValues={{
-							Name: "",
-							Email: "",
-							Password: "",
-							Cpassword: "",
+							username: "",
+							email: "",
+							password1: "",
+							password2: "",
 						}}
 						validationSchema={validate}
 						onSubmit={(values) => {
+							// Post Request Function
+							const axios = require("axios").default;
+							const sendSignUp = async () => {
+								try {
+									const response = await axios.post(
+										"https://losales.herokuapp.com/auth/registration/",
+										values
+									);
+									console.log(response)
+								} catch (error) {
+									console.error(error);
+								}
+							};
+							sendSignUp();
 							console.log(values);
 						}}>
 						{(formik) => (
 							<div>
-								{/* {console.log(formik)}	 */}
 								<div className='md:hidden fixed -bottom-6 -left-16 -z-10'>
 									<Image
 										src={Ellipse}
