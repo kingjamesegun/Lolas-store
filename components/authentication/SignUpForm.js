@@ -66,7 +66,7 @@ const SignUpForm = () => {
 				</div>
 			</div>
 			<div className='flex justify-between items-center mb-6'>
-				<div className='flex flex-row items-center justify-center'>
+				<div className='flex flex-row items-center justify-center invisible'>
 					<input className='mr-1' type='checkbox' />
 					<span className='text-xs font-semibold'>Remember Me</span>
 				</div>
