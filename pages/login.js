@@ -14,7 +14,7 @@ const login = () => {
 	const validate = Yup.object({
 		username: Yup.string().matches(/^\S*$/, 'There should be no space between username')
 			.max(15, "Must be 15 characters or less")
-			.required("Name is required"),
+			.required("Username is required"),
 		password: Yup.string()
 			.required("Password is required"),
 	});
