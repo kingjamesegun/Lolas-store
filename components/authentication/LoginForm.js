@@ -14,14 +14,14 @@ const LoginForm = () => {
 	return (
 		<Form className='z-10'>
 			<div className='flex flex-col mb-4'>
-				<label htmlFor='email' className='text-sm mb-2 font-semibold'>
-					Email
+				<label htmlFor='text' className='text-sm mb-2 font-semibold'>
+					Username
 				</label>
 				<InputForm
-					name='Email'
-					type='email'
-					id='email'
-					placeholder='youremail@gmail.com'
+					name='username'
+					type='text'
+					id='text'
+					placeholder='@JohnDoe'
 				/>
 			</div>
 			<div className='flex flex-col mb-4'>
@@ -30,7 +30,7 @@ const LoginForm = () => {
 				</label>
 				<div className='relative'>
 					<PasswordForm
-						name='Password'
+						name='password'
 						type={showPassword ? "text" : "password"}
 						id='password'
 						placeholder='Password'

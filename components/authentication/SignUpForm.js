@@ -19,16 +19,16 @@ const SignUpForm = () => {
 		<Form className='z-10'>
 			<div className='flex flex-col mb-4'>
 				<label htmlFor='text' className={"text-sm mb-2 font-semibold"}>
-					Name
+					Username
 				</label>
-				<InputForm  name='Name' type='text' id='text' placeholder='John Doe' />
+				<InputForm  name='username' type='text' id='text' placeholder='@Username' />
 			</div>
 			<div className='flex flex-col mb-4'>
 				<label htmlFor='email' className='text-sm mb-2 font-semibold'>
 					Email
 				</label>
 				<InputForm 
-					name='Email'
+					name='email'
 					type='email'
 					id='email'
 					placeholder='youremail@gmail.com'
@@ -41,7 +41,7 @@ const SignUpForm = () => {
 					</label>
 					<div className='relative'>
 						<PasswordForm 
-							name='Password'
+							name='password1'
 							type={showPassword ? "text" : "password"}
 							id='password'
 							placeholder='Password'
@@ -56,7 +56,7 @@ const SignUpForm = () => {
 					</label>
 					<div className='relative'>
 						<CpasswordForm 
-							name='Cpassword'
+							name='password2'
 							type={showCPassword ? "text" : "password"}
 							id='cpassword'
 							placeholder='Confirm Password' showCPassword={showCPassword}
@@ -66,7 +66,7 @@ const SignUpForm = () => {
 				</div>
 			</div>
 			<div className='flex justify-between items-center mb-6'>
-				<div className='flex flex-row items-center justify-center'>
+				<div className='flex flex-row items-center justify-center invisible'>
 					<input className='mr-1' type='checkbox' />
 					<span className='text-xs font-semibold'>Remember Me</span>
 				</div>

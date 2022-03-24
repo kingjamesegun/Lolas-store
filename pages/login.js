@@ -10,12 +10,15 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 
 const login = () => {
+	// Validation
 	const validate = Yup.object({
-		Email: Yup.string().email("Email is invalid").required("Email is required"),
-		Password: Yup.string()
-			.min(6, "Password must be at least 6 characters")
+		username: Yup.string().matches(/^\S*$/, 'There should be no space between username')
+			.max(15, "Must be 15 characters or less")
+			.required("Username is required"),
+		password: Yup.string()
 			.required("Password is required"),
 	});
+
 	return (
 		<div>
 			<Head>
@@ -34,11 +37,25 @@ const login = () => {
 				<div className='pb-6 p-4 pt-2 w-full md:w-6/12 lg:p-16 md:p-8 md:pt-4'>
 					<Formik
 						initialValues={{
-							Email: "",
-							Password: "",
+							username: "",
+							password: "",
 						}}
 						validationSchema={validate}
 						onSubmit={(values) => {
+							// Post Request Function
+							const axios = require("axios").default;
+							const sendLogin = async () => {
+								try {
+									const response = await axios.post(
+										"https://losales.herokuapp.com/auth/login/",
+										values
+									);
+									console.log(response)
+								} catch (error) {
+									console.error(error);
+								}
+							};
+							sendLogin();
 							console.log(values);
 						}}>
 						{(formik) => (
